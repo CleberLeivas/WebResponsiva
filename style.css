@@ -3,3 +3,32 @@
     margin: 0;
 }
 
+:root{
+    --cor1: rgba(23,61,88);
+    --cor2: rgba(218, 70, 64);
+}
+
+.topoDiv{
+    background-image: var(--bg-gradient);
+    transition: var(--inherit-transition);
+    gap: 1vw;
+    padding: 1vw;
+    background-color: var(--cor1);
+}
+
+.menuDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+    padding: 1vw;
+    flex-wrap: wrap;
+    background-color: var(--cor2);
+}
+
+p{
+    scroll-behavior: smooth;
+}
+p:hover{
+    font-style: var(--inherit-transition);
+}
