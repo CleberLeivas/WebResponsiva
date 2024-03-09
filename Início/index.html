@@ -6,6 +6,12 @@
     <title>Meu App de Controle Financeiro</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleButton.css">
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
@@ -15,17 +21,38 @@
     <header>
         <!-- Adicione elementos de navegação, como menus, aqui, se necessário -->
         <h1>Fidelidade</h1>
-        <h3>Meu Aplicativo de Controle Financeiro</h3>
+        <h3>Controle de Dízimos e Ofertas</h3>
     </header>
     
     <main>
         <!-- Aqui vai o conteúdo principal do aplicativo -->
+        <form id="formRegistro">
+            <label for="valor">Valor:</label>
+            <input type="text" id="valor" name="valor" tabindex="1" required>
+            <label for="data">Data:</label>
+            <input type="date" id="data" name="data" tabindex="2" required>
+            <button class="button-70" type="submit" tabindex="3">Adicionar Registro</button>
+        </form>        
+        
+        <table id="tabelaRegistros">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Valor</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aqui serão exibidos os registros -->
+            </tbody>
+        </table>
+        
     </main>
 
     <footer>
         <!-- Rodapé, informações adicionais ou links úteis aqui -->
+        <p>&copy; 2024 Fidelidade</p>
     </footer>
 
-    <!-- Adicione scripts JavaScript aqui, se necessário -->
 </body>
 </html>

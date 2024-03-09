@@ -1,13 +1,74 @@
-*{
+* {
     padding: 0;
     margin: 0;
+    box-sizing: border-box; /* Adicionado para garantir que o padding e a borda não afetem o tamanho total do elemento */
 }
 
-header{
+body {
+    font-family: "Madimi One", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra de 2px na horizontal e vertical com desfoque de 4px */
+}
+
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    background-color: cornflowerblue;
-    font-family: "Madimi One", sans-serif;
+    padding: 20px 0;
+    background-image: linear-gradient(#032d50, #4c8ccf); /* Alterado para um tom de azul mais escuro */
+    color: #fff; /* Cor do texto no cabeçalho */
 }
+
+main {
+    padding: 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto; /* Centraliza o formulário na página */
+}
+
+form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%; /* A tabela ocupará 100% da largura do seu contêiner */
+    max-width: 400px; /* Define o limite máximo de largura da tabela */
+    margin: 0 auto; /* Centraliza a tabela horizontalmente na página */
+    border-collapse: collapse; /* Mescla as bordas das células da tabela */
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(#4c8ccf, #032d50); /* Alterado para um tom de azul mais escuro */
+
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e6f1fa; /* Alterna a cor de fundo das linhas pares */
+  }
