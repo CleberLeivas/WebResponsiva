@@ -37,3 +37,56 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Seleciona o botão "Calcular" pelo seu ID
+    var btnCalcular = document.getElementById("btnCalcular");
+
+    // Adiciona um ouvinte de evento de clique ao botão "Calcular"
+    btnCalcular.addEventListener("click", function(event) {
+        // Evita que o formulário seja enviado
+        event.preventDefault();
+
+        // Chama a função de cálculo e atualiza o conteúdo da div resultadoCalculo
+        calcularTotal();
+    });
+
+// Função para calcular o total
+function calcularTotal() {
+    // Seleciona todas as células de valor na tabela
+    var cells = document.querySelectorAll("#tabelaRegistros tbody td:nth-child(2)");
+    
+    // Inicializa a variável para armazenar o total
+    var total = 0;
+    
+    // Itera sobre as células de valor e adiciona seus valores ao total
+    cells.forEach(function(cell) {
+        total += parseFloat(cell.textContent);
+    });
+    
+    // Calcula os dízimos, primícias e ofertas
+    var dizimo = total * 0.10;
+    var primicia = (total / 30) * 1;
+    var oferta = total * 0.05;
+    
+    // Seleciona as divs para exibir os resultados
+    var resultadoDiv = document.getElementById("resultadoTotal");
+    var resultadoDizimo = document.getElementById("resultadoDizimo");
+    var resultadoPrimicia = document.getElementById("resultadoPrimicia");
+    var resultadoOferta = document.getElementById("resultadoOferta");
+    var somaDosTotais = document.getElementById("somaDosTotais");
+    
+    // Atualiza o conteúdo de cada div com o resultado do cálculo
+    resultadoDiv.textContent = "Total: R$" + total.toFixed(2);
+    resultadoDizimo.textContent = "Seu Dízimo será de: R$" + dizimo.toFixed(2);
+    resultadoPrimicia.textContent = "Sua Primícia será de: R$" + primicia.toFixed(2);
+    resultadoOferta.textContent = "Sua Oferta será de: R$" + oferta.toFixed(2);
+    
+    // Calcula a soma dos totais
+    var somaTotal = dizimo + primicia + oferta;
+    
+    // Exibe a soma dos totais
+    somaDosTotais.textContent = "Soma dos Totais: R$" + somaTotal.toFixed(2);
+    }
+});
+
+

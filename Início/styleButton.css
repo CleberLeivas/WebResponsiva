@@ -1,3 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: flex-end; /* Alinhado à direita */
+}
+
 .button-70 {
   background-image: linear-gradient(#3373b8, #4c8ccf);
   border: 0;
@@ -8,8 +19,8 @@
   cursor: pointer;
   font-family: Montserrat,sans-serif;
   font-size: .9em;
-  margin: 15px;
-  padding: 10px 15px;
+  margin: 5px;
+  padding: 10px 10px;
   text-align: center;
   user-select: none;
   -webkit-user-select: none;
@@ -27,6 +38,3 @@
     width: 100%; /* Largura total */
 }
 
-#formRegistro button {
-    align-self: flex-end; /* Alinhado à direita */
-}

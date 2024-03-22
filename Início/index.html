@@ -28,11 +28,13 @@
         <!-- Aqui vai o conteúdo principal do aplicativo -->
         <form id="formRegistro">
             <label for="valor">Valor:</label>
-            <input type="text" id="valor" name="valor" tabindex="1" required>
+            <input type="text" id="valor" name="valor" placeholder="Digite um valor" tabindex="1" required>
             <label for="data">Data:</label>
             <input type="date" id="data" name="data" tabindex="2" required>
-            <button class="button-70" type="submit" tabindex="3">Adicionar Registro</button>
-        </form>        
+            <div class="buttonContainer">
+                <button class="button-70" type="submit" tabindex="3">Adicionar Registro</button>
+            </div>
+        </form>             
         
         <table id="tabelaRegistros">
             <thead>
@@ -46,8 +48,20 @@
                 <!-- Aqui serão exibidos os registros -->
             </tbody>
         </table>
-        
     </main>
+    <div class="resultado">
+        <div>
+            <button class="button-70" id="btnCalcular" type="button" tabindex="4">Calcular</button>
+        </div>
+        <div class="totais">
+            <div id="resultadoTotal"></div>      
+            <div id="resultadoDizimo"></div>      
+            <div id="resultadoPrimicia"></div>      
+            <div id="resultadoOferta"></div>
+                    
+            <div id="somaDosTotais"></div>      
+        </div>
+    </div>
 
     <footer>
         <!-- Rodapé, informações adicionais ou links úteis aqui -->
